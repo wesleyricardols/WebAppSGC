@@ -1,4 +1,7 @@
-﻿namespace SGC.ApplicationCore.Entity
+﻿using System.Collections;
+using System.Collections.Generic;
+
+namespace SGC.ApplicationCore.Entity
 {
     public class Cliente
     {
@@ -10,5 +13,6 @@
         public int ClienteId { get; set; }
         public string Nome { get; set; }
         public string CPF { get; set; }
+        public virtual ICollection<Contato> Contatos { get; set; }
     }
 }
